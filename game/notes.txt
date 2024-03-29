@@ -1,0 +1,121 @@
+Mockups for the game
+
+MISC
+Lightning!  ϟ
+Castles     ☗
+
+POWER SOURCES
+Coal        ⬣
+Oil         ⌸
+Garbage     ▊
+Uranium     U
+
+BOX DRAWING
+┌ ┐ └ ┘
+╭ ╮╰ ╯
+├ ┤ ┴ ┬
+┼
+─ │
+
+tower based
+
+TEAMS building competing sandcastles
+- kind of like civ I guess, but very focused on cities
+- map is a grid:
+
+▞ 𝅙 𝅙 𝅙 𝅙
+▉ ▗ ▉ 𝅙 𝅙
+𝅙 ▉ ▗ ▉ 𝅙
+▐ ▘ ▝ 𝅙 𝅙
+𝅙 ▘ 𝅙 𝅙 𝅙
+
+𝅙   Empty
+
+▖	Quadrant lower left
+▗	Quadrant lower right
+▘   Quadrant upper left
+▝	Quadrant upper right
+
+▀	Upper half block
+▄	Lower half block
+▐	Right half block
+▌	Left half block
+▚	Quadrant upper left and lower right
+▞	Quadrant upper right and lower left
+
+▙	Quadrant upper left and lower left and lower right
+▛	Quadrant upper left and upper right and lower left
+▜	Quadrant upper left and upper right and lower right
+▟	Quadrant upper right and lower left and lower right
+
+▉   "Full" block
+
+- you can build anywhere on the grid
+- castles can attack neighboring castles
+𝅙 . . . 𝅙
+𝅙 . ▉ . 𝅙
+𝅙 . . . 𝅙
+𝅙 𝅙 𝅙 𝅙 𝅙
+𝅙 𝅙 𝅙 𝅙 𝅙
+
+- to win you conquer all the other castles
+- to conquer castles you need to:
+    - destroy them (space is left empty afterwards)
+    - ransack them (you take over the castle using $ and infiltration)
+- to DESTROY a castle:
+    - you need to build weapons to your castles
+        - to build weapons you need money
+- to RANSACK a castle:
+    - assign spies, give them money to bribe with, and give them X number of turns to win
+- the more castles you have, the more expensive they are to maintain
+
+- you can PROTECT your castles by building defenses:
+    - moats
+        - protects against thieves
+    - guards
+        - to infiltrate a castle, every guard must be bribed
+        - guards cost money to maintain
+
+- the game is round-based, each player takes a turn
+    - on your turn, you:
+        - build a new castle (if possible)
+        - choose an action for each castle:
+            - fortify (doubles defenses for this round)
+            - upgrade (add weapons / add defenses)
+            - attack (choose a target)
+    - each round you're given money
+    - on some rounds, the ocean will wear down defenses
+
+- castles located at nearer edges of the board will:
+    - generate more money
+    - be more likely to be worn down by ocean water
+
+
+
+
+
+Basic HUD
+
+ current player
+   |  sector of map
+   |    |   money
+   |    |     |
+ GREEN │ A3 │ $ 950  │
+───────┴────┴────────╯
+[GAMEPLAY AREA, 13 lines tall]
+ 
+(board with coordinates displayed)
+        ╭─A─B─C─D─E─╮
+        1 𝅙 𝅙 𝅙 𝅙 𝅙 │
+        2 𝅙 𝅙 𝅙 𝅙 𝅙 │
+        3 𝅙 𝅙 𝅙 𝅙 𝅙 │
+        4 𝅙 𝅙 𝅙 𝅙 𝅙 │
+        5 𝅙 𝅙 𝅙 𝅙 𝅙 │
+        ╰───────────╯
+ 
+(screen is 70 characters wide, by 19 lines tall)
+
+──────────────────────────────────────────────────────────────────────
+
+Prompt line
+>>> [input line]
